@@ -1,15 +1,23 @@
 {
   "name": "My Finance — Personal Finance Manager",
   "short_name": "My Finance",
-  "description": "Private personal finance manager with Tamil and English support.",
+  "description": "Personal finance manager with English, Tamil, Telugu and Nepali support and colour themes.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#f4f6fb",
-  "theme_color": "#7357f5",
+  "theme_color": "#168c72",
   "categories": [
     "finance",
     "productivity"
+  ],
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
   ]
 }
