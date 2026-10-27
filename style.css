@@ -21,3 +21,45 @@ body[data-theme="dark"] .balance-card{background:linear-gradient(125deg,#202e54,
 body[data-theme="light"]{--purple:#0c9873;--purple-2:#42d6a0;--green:#0c9873;--red:#ed5c70}
 body[data-theme="light"] .balance-card{background:linear-gradient(125deg,#13b98b,#1b9bea 65%,#5069f8)}
 #themeBtn{font-weight:900;box-shadow:0 4px 12px rgba(40,50,90,.08)}
+
+
+/* V3 — polished responsive finance dashboard */
+:root{--bg:#f2f5fa;--surface:#fff;--surface-2:#f7f9fd;--text:#17233c;--muted:#7d8ba3;--line:#e4eaf3;--purple:#168c72;--purple-2:#43c6a0;--green:#10a77d;--red:#e85b75;--shadow:0 18px 50px rgba(25,48,83,.07);--radius:24px}
+body{background:radial-gradient(ellipse at 85% -10%,#d7f6ec 0,transparent 35%),var(--bg);letter-spacing:-.1px}
+.sidebar{background:rgba(255,255,255,.88);backdrop-filter:blur(20px);border-right:1px solid #e2e9f1;padding:30px 18px 22px}
+.brand-mark{background:linear-gradient(145deg,#40e0ad,#168c72 60%,#135d78)!important;box-shadow:0 9px 20px #168c7238!important;transform:none!important;border-radius:14px}
+.brand b{letter-spacing:-1px}
+.profile-card{background:linear-gradient(135deg,#fff,#f7fbfa);border-color:#e4eee9}
+.avatar{background:linear-gradient(145deg,#b8f3df,#8edbc5);color:#0b725b}
+.nav-item{border-radius:14px;padding:14px 13px}
+.nav-item.active{background:linear-gradient(100deg,#dff8ef,#f0fcf7);color:#087d62;box-shadow:inset 3px 0 #13a981}
+.main{padding:28px 38px 42px}
+.topbar{margin-bottom:28px}
+.eyebrow{letter-spacing:2px;color:#168c72;font-weight:800}
+h1,h2,h3{letter-spacing:-.7px}
+.balance-card{background:linear-gradient(120deg,#087c65 0%,#0e9e7b 54%,#43c6a0 100%);border:0;box-shadow:0 22px 45px #138e7330;overflow:hidden;position:relative}
+.balance-card:after{content:"";position:absolute;width:290px;height:290px;border:1px solid #ffffff27;border-radius:50%;right:-85px;top:-145px;box-shadow:0 0 0 28px #ffffff0b,0 0 0 58px #ffffff08;pointer-events:none}
+.stat-card,.panel,.budget-card,.account-card{border:1px solid #e7edf4;box-shadow:0 12px 32px rgba(27,45,94,.045);border-radius:22px}
+.stat-card:hover,.budget-card:hover,.account-card:hover{transform:translateY(-2px);box-shadow:0 18px 35px rgba(27,45,94,.08)}
+.primary-btn{background:linear-gradient(135deg,#20b88d,#087d66);box-shadow:0 8px 18px #168c7229;border-radius:14px}
+input,select{border-radius:13px!important;border-color:#e2e9f2!important}
+.icon-btn{border-radius:14px;border:1px solid #e4eaf2;background:#fff}
+.transaction-row{border-radius:15px;transition:background .2s}
+.transaction-row:hover{background:#f4faf8}
+.bottom-nav{backdrop-filter:blur(20px)}
+/* theme colours */
+body[data-theme="blue"]{--purple:#2479e8;--purple-2:#63b4ff;--green:#12a9a0}
+body[data-theme="blue"] .balance-card{background:linear-gradient(120deg,#1359bf,#2479e8 58%,#63b4ff)}
+body[data-theme="green"]{--purple:#0a9b70;--purple-2:#41d7a0;--green:#0a9b70}
+body[data-theme="green"] .balance-card{background:linear-gradient(120deg,#057a58,#0ebd87 58%,#5ae3b0)}
+body[data-theme="sunset"]{--purple:#e97828;--purple-2:#ffb35c;--green:#159b75}
+body[data-theme="sunset"] .balance-card{background:linear-gradient(120deg,#e96b2c,#f49b43 58%,#ffbf70)}
+body[data-theme="dark"]{--bg:#090e1b;--surface:#121a2b;--surface-2:#1a2438;--text:#f2f5ff;--muted:#9aa8c3;--line:#28354d;--shadow:0 14px 38px rgba(0,0,0,.22)}
+body[data-theme="dark"] .sidebar{background:rgba(18,26,43,.94);border-color:#28354d}
+body[data-theme="dark"] .balance-card{background:linear-gradient(120deg,#202e54,#273f72 60%,#3b3674)}
+body[data-theme="dark"] .profile-card,body[data-theme="dark"] .icon-btn{background:#182238;border-color:#28354d}
+body[data-theme="dark"] .nav-item.active{background:#22382f;color:#7de3be}
+body[data-theme="light"]{--purple:#0c9873;--purple-2:#42d6a0;--green:#0c9873}
+body[data-theme="light"] .balance-card{background:linear-gradient(120deg,#13b98b,#1b9bea 65%,#5069f8)}
+@media(max-width:900px){.main{padding:22px 20px 35px}.sidebar{box-shadow:12px 0 40px #17233c12}}
+@media(max-width:600px){body{font-size:14px}.main{padding:17px 14px 90px}.topbar{gap:10px;margin-bottom:20px}.balance-card{border-radius:22px}.stat-card,.panel,.budget-card,.account-card{border-radius:18px}.brand b{font-size:19px}}
