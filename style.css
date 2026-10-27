@@ -119,3 +119,6 @@ body[data-theme="dark"] .primary-btn{color:#fff}
   .modal{width:100%;max-height:90dvh;border-radius:24px 24px 16px 16px;padding:20px 16px calc(18px + env(safe-area-inset-bottom))}
 }
 @media(prefers-reduced-motion:reduce){.stat-card,.panel,.budget-card,.account-card,button,.primary-btn,.secondary-btn,.icon-btn{transition:none!important}}
+
+.app-site-footer{margin:0 22px 0 272px;padding-top:20px;gap:10px 18px}.app-site-footer a{font-size:11px;color:var(--muted);text-decoration:none}.app-site-footer a:hover{color:var(--green);text-decoration:underline}.app-copyright{margin-left:250px;padding:0 15px 20px;color:var(--muted);font-size:10px}
+@media(max-width:900px){.app-site-footer{margin-left:0;margin-right:0;padding:20px 12px 0}.app-copyright{margin-left:0;padding-bottom:calc(20px + env(safe-area-inset-bottom))}}
