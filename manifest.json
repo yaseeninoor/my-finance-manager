@@ -1,0 +1,15 @@
+{
+  "name": "My Finance — Personal Finance Manager",
+  "short_name": "My Finance",
+  "description": "Private personal finance manager with Tamil and English support.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f4f6fb",
+  "theme_color": "#7357f5",
+  "categories": [
+    "finance",
+    "productivity"
+  ]
+}
