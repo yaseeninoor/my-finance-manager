@@ -7,7 +7,6 @@
     "userInterfaceStyle": "automatic",
     "scheme": "myfinancemanager",
     "newArchEnabled": true,
-    "icon": "./assets/icon.png",
     "splash": {
       "backgroundColor": "#7357F5",
       "resizeMode": "contain"
@@ -23,9 +22,6 @@
     "android": {
       "package": "com.yaseeninoor.myfinancemanager",
       "versionCode": 1,
-      "adaptiveIcon": {
-        "backgroundColor": "#7357F5"
-      },
       "edgeToEdgeEnabled": true
     },
     "plugins": [],
