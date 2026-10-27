@@ -26,7 +26,10 @@
     },
     "plugins": [],
     "extra": {
-      "privacyNote": "Local-first app. User data is stored on device."
+      "privacyNote": "Local-first app. User data is stored on device.",
+      "eas": {
+        "projectId": "909bf99d-0ccc-4b68-8999-7c4c67d6c843"
+      }
     }
   }
 }
