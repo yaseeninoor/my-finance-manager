@@ -40,3 +40,7 @@ The app is static; it does not need API keys or a backend. The charts use Chart.
 
 ## Backup format
 Use the built-in JSON backup button. Restore replaces current local app data, so export a fresh backup before restoring if you want to keep the current version.
+
+## Native mobile apps (Android + iOS)
+
+An Expo / React Native project is available in [`mobile/`](./mobile/README.md). It includes the native dashboard, transaction entry and history, starter budget screen, Tamil/English labels, dark mode, and local on-device storage. See the mobile README for running with Expo Go and building Android/iOS packages. The app source is not yet a signed APK/IPA and has not been submitted to either app store.
