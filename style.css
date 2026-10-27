@@ -63,3 +63,59 @@ body[data-theme="light"]{--purple:#0c9873;--purple-2:#42d6a0;--green:#0c9873}
 body[data-theme="light"] .balance-card{background:linear-gradient(120deg,#13b98b,#1b9bea 65%,#5069f8)}
 @media(max-width:900px){.main{padding:22px 20px 35px}.sidebar{box-shadow:12px 0 40px #17233c12}}
 @media(max-width:600px){body{font-size:14px}.main{padding:17px 14px 90px}.topbar{gap:10px;margin-bottom:20px}.balance-card{border-radius:22px}.stat-card,.panel,.budget-card,.account-card{border-radius:18px}.brand b{font-size:19px}}
+
+
+/* V4 — tactile polish, clearer hierarchy, and iPhone-first finishing */
+:root{--focus-ring:rgba(22,140,114,.28)}
+html{scroll-padding-top:24px}
+body{min-height:100dvh;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+button,.primary-btn,.secondary-btn,.icon-btn,.nav-item{ -webkit-tap-highlight-color:transparent; touch-action:manipulation}
+button:active,.primary-btn:active,.secondary-btn:active,.icon-btn:active{transform:scale(.975)}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--focus-ring);outline-offset:3px}
+h1{font-family:Manrope,'DM Sans',sans-serif;font-weight:800}
+h2,h3{font-family:Manrope,'DM Sans',sans-serif;font-weight:750}
+.panel-heading p,.welcome-row p,.section-toolbar p{line-height:1.65}
+.stat-value{font-variant-numeric:tabular-nums;letter-spacing:-1.1px}
+.stat-card,.panel,.budget-card,.account-card{overflow:hidden}
+.primary-btn,.secondary-btn,.icon-btn{transition:transform .16s ease,box-shadow .2s ease,background .2s ease}
+.primary-btn:hover{box-shadow:0 10px 24px #168c7238;filter:saturate(1.08)}
+.icon-btn:hover{border-color:#b9ded3;background:#f4fbf8}
+input,select,textarea{min-height:44px}
+.form-input{width:100%}
+.modal-backdrop{padding:18px}
+.modal{max-height:min(88dvh,850px);overflow:auto;overscroll-behavior:contain}
+.sidebar{padding-bottom:max(20px,env(safe-area-inset-bottom))}
+.main{padding-bottom:max(42px,env(safe-area-inset-bottom))}
+.app-footer{padding-bottom:env(safe-area-inset-bottom)}
+.toast{bottom:calc(22px + env(safe-area-inset-bottom))}
+.chart-wrap{position:relative}
+canvas{max-width:100%}
+.empty-hint{line-height:1.6}
+body[data-theme="dark"] .icon-btn:hover{background:#223149;border-color:#3b526f}
+body[data-theme="dark"] .transaction-row:hover{background:#18283a}
+body[data-theme="dark"] .profile-card{background:linear-gradient(135deg,#151f32,#101827)}
+body[data-theme="dark"] input,body[data-theme="dark"] select,body[data-theme="dark"] textarea{background:#101827!important;color:var(--text);border-color:var(--line)!important}
+body[data-theme="dark"] .primary-btn{color:#fff}
+@media(min-width:1400px){.main{max-width:1700px;margin-left:250px;width:calc(100% - 250px);padding-left:48px;padding-right:48px}.stats-grid{gap:20px}.content-grid{gap:20px}}
+@media(max-width:600px){
+  .main{padding-top:calc(14px + env(safe-area-inset-top));padding-left:13px;padding-right:13px;padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+  .topbar{align-items:center}
+  .topbar h1{font-size:23px;line-height:1.15}
+  .eyebrow{font-size:9px;letter-spacing:1.35px}
+  .top-actions{gap:7px}
+  .top-actions .icon-btn{min-width:40px;min-height:40px;padding:8px}
+  .top-actions #addTopBtn{min-height:40px;padding:10px 12px;border-radius:13px}
+  .top-actions #addTopBtn span{display:none}
+  .welcome-row{gap:12px;align-items:flex-start}
+  .welcome-row h2{font-size:20px;line-height:1.28}
+  .period-select{max-width:46%;font-size:11px}
+  .stat-card{padding:16px}
+  .stat-value{font-size:clamp(19px,5.6vw,26px);overflow-wrap:anywhere}
+  .panel{padding:16px}
+  .panel-heading{gap:10px}
+  .panel-heading h3{font-size:15px}
+  .chart-legend{flex-wrap:wrap;justify-content:flex-end;font-size:10px}
+  .modal-backdrop{align-items:flex-end;padding:8px}
+  .modal{width:100%;max-height:90dvh;border-radius:24px 24px 16px 16px;padding:20px 16px calc(18px + env(safe-area-inset-bottom))}
+}
+@media(prefers-reduced-motion:reduce){.stat-card,.panel,.budget-card,.account-card,button,.primary-btn,.secondary-btn,.icon-btn{transition:none!important}}
