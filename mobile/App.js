@@ -3,7 +3,7 @@ import { SafeAreaView, ScrollView, View, Text, TextInput, Pressable, StatusBar, 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const STORE_KEY = 'my-finance-manager-mobile-v1';
-const PURPLE = '#7357F5';
+const PURPLE = '#12304A';
 const CATS = ['Food & dining','Transport','Shopping','Bills & utilities','Health','Family','Education','Housing','Travel','Salary','Business','Other'];
 const today = () => new Date().toISOString().slice(0,10);
 const money = n => new Intl.NumberFormat('en-AE',{style:'currency',currency:'AED',maximumFractionDigits:2}).format(Number(n)||0);
@@ -15,7 +15,7 @@ export default function App(){
  const [ready,setReady]=useState(false),[tab,setTab]=useState('overview'),[modal,setModal]=useState(false),[kind,setKind]=useState('expense'),[amount,setAmount]=useState(''),[desc,setDesc]=useState(''),[category,setCategory]=useState(CATS[0]),[date,setDate]=useState(today()),[source,setSource]=useState('Cash'),[newAccount,setNewAccount]=useState(''),[query,setQuery]=useState(''),[lang,setLang]=useState('en'),[dark,setDark]=useState(false),[theme,setTheme]=useState('purple');
  useEffect(()=>{(async()=>{try{const raw=await AsyncStorage.getItem(STORE_KEY);if(raw){const parsed=JSON.parse(raw);setData(d=>({...d,...parsed}))}}catch(e){}finally{setReady(true)}})()},[]);
  useEffect(()=>{if(ready)AsyncStorage.setItem(STORE_KEY,JSON.stringify(data)).catch(()=>Alert.alert('Storage error','Could not save your data on this device.'))},[data,ready]);
- const accounts=data.accounts||['Cash','Mashreq Bank','Emirates NBD','RAKBANK','NBF','Credit Card']; const t=copy[lang]||copy.en, palette={purple:'#7357F5',blue:'#1685F8',green:'#0A9B70',sunset:'#E97828'}, accent=dark?'#9B8AFF':(palette[theme]||palette.purple), bg=dark?'#090E1B':'#F4F7FC', surface=dark?'#121A2B':'#FFFFFF', text=dark?'#F0F3FF':'#182139', muted=dark?'#9AA8C3':'#8991A7', line=dark?'#28354D':'#E6EBF4';
+ const accounts=data.accounts||['Cash','Mashreq Bank','Emirates NBD','RAKBANK','NBF','Credit Card']; const t=copy[lang]||copy.en, palette={purple:'#0D9488',blue:'#1685F8',green:'#0A9B70',sunset:'#E97828'}, accent=dark?'#9B8AFF':(palette[theme]||palette.purple), bg=dark?'#090E1B':'#F4F7FC', surface=dark?'#121A2B':'#FFFFFF', text=dark?'#F0F3FF':'#182139', muted=dark?'#9AA8C3':'#8991A7', line=dark?'#28354D':'#E6EBF4';
  const sorted=useMemo(()=>[...data.transactions].sort((a,b)=>b.date.localeCompare(a.date)),[data.transactions]);
  const income=sorted.filter(x=>x.type==='income').reduce((a,x)=>a+x.amount,0),expenses=sorted.filter(x=>x.type==='expense').reduce((a,x)=>a+x.amount,0),balance=(Number(data.openingBalance)||0)+income-expenses;
  const accountSummary=useMemo(()=>{const m={};sorted.forEach(x=>{const k=x.source||'Cash';if(!m[k])m[k]={income:0,expense:0};m[k][x.type==='income'?'income':'expense']+=x.amount});return Object.entries(m)},[sorted]);
