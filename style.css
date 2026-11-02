@@ -157,3 +157,12 @@ body::after{content:"MY FINANCE\\A\\AYour money. Your clarity.\\A\\AThis applica
 .lock-emblem{display:grid;place-items:center;width:70px;height:70px;margin:0 auto 20px;border-radius:22px;font-size:34px;color:#b7fff0;background:linear-gradient(145deg,#1cc8a6,#086b78);box-shadow:0 8px 0 #064b5b,0 16px 28px #0004}
 .lock-kicker{font-size:10px;font-weight:900;letter-spacing:2px;color:#8bead9}.lock-card h1{margin:12px 0 7px;font-size:30px}.lock-card p{color:#b9d7dc;margin:0 0 24px}.lock-card form{display:grid;gap:12px}.lock-card input{width:100%;padding:16px;border-radius:14px;border:1px solid #8bead955;background:#061b2a;color:white;text-align:center;font-size:22px;letter-spacing:8px;outline:none}.lock-card input:focus{border-color:#54e3c6;box-shadow:0 0 0 3px #54e3c622}.lock-card .primary-btn{width:100%;justify-content:center;padding:15px}.lock-credit{margin-top:28px;font-size:11px;line-height:1.7;color:#a9c7ce}.lock-credit strong{color:#e8fffa;font-size:12px}#unlockError{min-height:20px;margin-top:10px;color:#ffb4a9;font-size:12px}
 @media(prefers-reduced-motion:reduce){.stat-card,.panel,.primary-btn{transition:none}}
+
+/* Fast income/expense actions */
+.quick-entry{display:grid;grid-template-columns:1fr minmax(112px,150px) minmax(112px,150px);gap:12px;align-items:center;margin:0 0 22px;padding:15px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(125deg,var(--panel),color-mix(in srgb,var(--green) 7%,var(--panel)));box-shadow:0 8px 0 color-mix(in srgb,var(--line) 65%,transparent),0 16px 28px #071b2b12}
+.quick-entry-copy{display:grid;gap:5px}.quick-entry-copy b{font-size:14px}.quick-entry-copy span{font-size:12px;color:var(--muted)}
+.quick-entry button{border:0;border-radius:15px;padding:12px 14px;font-weight:800;font-size:15px;cursor:pointer;box-shadow:0 4px 0 #071b2b24;transition:transform .15s,box-shadow .15s}
+.quick-entry button:active{transform:translateY(3px);box-shadow:0 1px 0 #071b2b24}
+.quick-entry button small{display:block;font-size:10px;font-weight:600;opacity:.78;margin-top:3px}
+.quick-in{background:linear-gradient(145deg,#18bd99,#07866e);color:white}.quick-out{background:linear-gradient(145deg,#f7a1b0,#dc617a);color:#31101b}
+@media(max-width:640px){.quick-entry{grid-template-columns:1fr 1fr}.quick-entry-copy{grid-column:1/-1}.quick-entry button{padding:11px}}
