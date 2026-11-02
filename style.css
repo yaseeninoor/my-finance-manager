@@ -141,3 +141,19 @@ body::after{content:"MY FINANCE\\A\\AYour money. Your clarity.\\A\\AThis applica
 @keyframes financeSplashFade{0%,72%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
 @keyframes financeSplashText{0%,12%{opacity:0;transform:translateY(12px)}25%,65%{opacity:1;transform:translateY(0)}100%{opacity:0;visibility:hidden;transform:translateY(-8px)}}
 @media(prefers-reduced-motion:reduce){body::before,body::after{animation-duration:1ms}}
+
+/* Premium 3D finance dashboard and PIN lock */
+:root{--green:#12b99a}
+.stat-card,.panel,.profile-card,.primary-btn,.secondary-btn,.nav-item{transform-style:preserve-3d;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.stat-card{border:1px solid color-mix(in srgb,var(--green) 22%,var(--line));box-shadow:0 10px 0 color-mix(in srgb,var(--line) 70%,transparent),0 18px 34px #061c2b12;overflow:hidden}
+.stat-card:hover,.panel:hover{transform:translateY(-3px);box-shadow:0 14px 0 color-mix(in srgb,var(--line) 55%,transparent),0 24px 40px #061c2b18}
+.balance-card{background:linear-gradient(135deg,#0a273b 0%,#10536a 55%,#087c65 100%);color:#fff;border:1px solid #3bd6b4;box-shadow:0 10px 0 #073b4b,0 22px 42px #052a3c35}
+.balance-card .stat-top,.balance-card .stat-foot{color:#d6fff5}.balance-card .stat-icon{background:#ffffff20;color:#fff}
+.primary-btn{box-shadow:0 4px 0 color-mix(in srgb,var(--green) 60%,#073b4b),0 9px 18px #087c6526}
+.primary-btn:active{transform:translateY(3px);box-shadow:0 1px 0 #087c65}
+#appLockScreen{display:none;position:fixed;inset:0;z-index:10050;align-items:center;justify-content:center;padding:24px;background:radial-gradient(ellipse at 50% 20%,#17647b 0%,#0a263b 43%,#04111f 100%);color:#f5fffd}
+#appLockScreen.visible{display:flex}
+.lock-card{width:min(100%,390px);padding:36px 28px;border:1px solid #67e8d066;border-radius:30px;text-align:center;background:linear-gradient(145deg,#ffffff18,#ffffff06);box-shadow:0 18px 0 #03101c,0 30px 70px #0008,inset 0 1px #ffffff30;backdrop-filter:blur(20px);transform:perspective(900px) rotateX(2deg)}
+.lock-emblem{display:grid;place-items:center;width:70px;height:70px;margin:0 auto 20px;border-radius:22px;font-size:34px;color:#b7fff0;background:linear-gradient(145deg,#1cc8a6,#086b78);box-shadow:0 8px 0 #064b5b,0 16px 28px #0004}
+.lock-kicker{font-size:10px;font-weight:900;letter-spacing:2px;color:#8bead9}.lock-card h1{margin:12px 0 7px;font-size:30px}.lock-card p{color:#b9d7dc;margin:0 0 24px}.lock-card form{display:grid;gap:12px}.lock-card input{width:100%;padding:16px;border-radius:14px;border:1px solid #8bead955;background:#061b2a;color:white;text-align:center;font-size:22px;letter-spacing:8px;outline:none}.lock-card input:focus{border-color:#54e3c6;box-shadow:0 0 0 3px #54e3c622}.lock-card .primary-btn{width:100%;justify-content:center;padding:15px}.lock-credit{margin-top:28px;font-size:11px;line-height:1.7;color:#a9c7ce}.lock-credit strong{color:#e8fffa;font-size:12px}#unlockError{min-height:20px;margin-top:10px;color:#ffb4a9;font-size:12px}
+@media(prefers-reduced-motion:reduce){.stat-card,.panel,.primary-btn{transition:none}}
