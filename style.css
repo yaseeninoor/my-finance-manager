@@ -133,3 +133,11 @@ body[data-theme="dark"] .primary-btn{color:#fff}
 .site-footer.app-site-footer{display:flex;flex-wrap:wrap;justify-content:center}
 @media(max-width:900px){.site-links-nav{margin-top:10px;gap:10px}.site-links-nav a{padding:12px 10px;min-height:74px;font-size:11px}.sidebar{overflow-y:auto;overscroll-behavior:contain}}
 @media(prefers-reduced-motion:reduce){.site-links-nav a{transition:none}}
+
+
+/* Branded finance-app startup screen */
+body::before{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;background:radial-gradient(ellipse at 50% 42%,#155e75 0%,#12304a 38%,#071725 100%);animation:financeSplashFade 3.2s cubic-bezier(.7,0,.3,1) forwards}
+body::after{content:"MY FINANCE\\A\\AYour money. Your clarity.\\A\\AThis application made by\\ANoor Mohammed Ismail";white-space:pre;position:fixed;z-index:10000;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;color:#fff;font:600 18px/1.8 'DM Sans',sans-serif;letter-spacing:.3px;pointer-events:none;animation:financeSplashText 3.2s ease forwards}
+@keyframes financeSplashFade{0%,72%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
+@keyframes financeSplashText{0%,12%{opacity:0;transform:translateY(12px)}25%,65%{opacity:1;transform:translateY(0)}100%{opacity:0;visibility:hidden;transform:translateY(-8px)}}
+@media(prefers-reduced-motion:reduce){body::before,body::after{animation-duration:1ms}}
