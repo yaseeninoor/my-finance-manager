@@ -18,15 +18,18 @@
 <body>
   <div class="app-shell">
     <aside class="sidebar" id="sidebar">
-      <a class="brand" href="#" aria-label="My Finance home"><span class="brand-mark">↗</span><span><b>myfinance</b><small>PERSONAL SPACE</small></span></a>
-      <div class="profile-card"><div class="avatar">Y</div><div><strong id="profileName">My Wallet</strong><small>Personal account</small></div><span class="online-dot"></span></div>
+      <div class="sidebar-head"><a class="brand" href="#" aria-label="My Finance home"><span class="brand-mark">↗</span><span><b>myfinance</b><small>PERSONAL FINANCE</small></span></a><button type="button" class="sidebar-close" id="sidebarCloseBtn" aria-label="Close menu">×</button></div>
+      <div class="profile-card"><div class="profile-avatar-wrap"><div class="avatar">Y</div><span class="profile-status"></span></div><div class="avatar">Y</div><div><strong id="profileName">My Wallet</strong><small>Personal account</small></div><span class="online-dot"></span></div>
       <nav class="nav-list" aria-label="Main navigation">
+        <div class="nav-section-label">WORKSPACE</div>
         <button class="nav-item active" data-view="overview"><span>⌂</span><span>Home</span></button>
         <button class="nav-item" data-view="transactions"><span>◷</span><span>History</span></button>
+        <div class="nav-section-label nav-section-spaced">MONEY MANAGEMENT</div>
         <button class="nav-item" data-view="budgets"><span>▣</span><span>Budget</span></button>
         <button class="nav-item" data-view="income"><span>▤</span><span>Income</span></button>
         <button class="nav-item" data-view="savings"><span>◇</span><span>My Savings</span></button>
         <button class="nav-item" data-view="lent"><span>⇄</span><span>Lent &amp; Borrowed</span></button>
+        <div class="nav-section-label nav-section-spaced">INSIGHTS &amp; PLANNING</div>
         <button class="nav-item" data-view="analytics"><span>▥</span><span>Analytics</span></button>
         <button class="nav-item" data-view="tasks"><span>✓</span><span>Tasks</span></button>
         <button class="nav-item" data-view="accounts"><span>▧</span><span>Accounts</span></button>
