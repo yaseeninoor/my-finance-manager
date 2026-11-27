@@ -231,3 +231,7 @@ body.dark .stat-card:not(.balance-card),body.dark .panel,body.dark .budget-card,
  .mobile-bottom-nav{left:10px;right:10px;bottom:max(9px,env(safe-area-inset-bottom));padding:8px 6px}
 }
 @media(max-width:380px){.top-actions .primary-btn{font-size:0;width:39px;height:39px;padding:0}.top-actions .primary-btn span{display:none}.stats-grid{gap:8px}.stat-card{padding:12px}}
+
+/* Mobile drawer reliability fix */
+.sidebar-backdrop{display:none}
+@media(max-width:850px){.sidebar{z-index:1002!important;position:fixed!important;top:0;bottom:0;left:0;transform:translate3d(-110%,0,0)!important;visibility:hidden;transition:transform .28s ease,visibility .28s ease}.sidebar.open{transform:translate3d(0,0,0)!important;visibility:visible}.sidebar-backdrop{display:block;position:fixed;inset:0;z-index:1001;border:0;padding:0;background:rgba(3,13,24,.52);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s ease,visibility .2s ease}.sidebar-backdrop.visible{opacity:1;visibility:visible;pointer-events:auto}.topbar{z-index:1000}.mobile-menu{position:relative;z-index:1003;display:grid!important;flex:0 0 42px;min-width:42px;min-height:42px;touch-action:manipulation}}
